@@ -42,25 +42,27 @@
         </div>
         <div class="review">
             <div class="container-review">
-                <div class="lab-review">
-                    <div class="data-product-review">
-                        <div class="product-image-review"><img src="aothunnam.jpg" alt=""></div>
-                        <div class="product-name-review">Áo thun nam</div>
+                <form action="#" method="POST">
+                    <div class="lab-review">
+                        <div class="data-product-review">
+                            <div class="product-image-review"><img src="aothunnam.jpg" alt="" id="image_url" name="image_url"></div>
+                            <div class="product-name-review" id="name" name="name">Áo thun nam</div>
+                        </div>
+                        <span>Đánh giá sản phẩm</span>
+                        <div class="number-review">
+                            <div class="star" id="rating" name="rating" data-value="1"></div>
+                            <div class="star" id="rating" name="rating" data-value="2"></div>
+                            <div class="star" id="rating" name="rating" data-value="3"></div>
+                            <div class="star" id="rating" name="rating" data-value="4"></div>
+                            <div class="star" id="rating" name="rating" data-value="5"></div>
+                        </div>
+                        <div class="bark-review">
+                            <span>Viết đánh giá</span>
+                            <textarea name="comment" id="comment" placeholder="Viết đánh giá sản phẩm tại đây..."></textarea>
+                            <button type="submit" class="btn-submit-review">Gửi</button>
+                        </div>
                     </div>
-                    <span>Đánh giá sản phẩm</span>
-                    <div class="number-review">
-                        <div class="star" data-value="1"></div>
-                        <div class="star" data-value="2"></div>
-                        <div class="star" data-value="3"></div>
-                        <div class="star" data-value="4"></div>
-                        <div class="star" data-value="5"></div>
-                    </div>
-                    <div class="bark-review">
-                        <span>Viết đánh giá</span>
-                        <textarea name="#" id="#" placeholder="Viết đánh giá sản phẩm tại đây..."></textarea>
-                        <button class="btn-submit-review">Gửi</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -68,9 +70,11 @@
 
     <script>
         const stars = document.querySelectorAll('.star');
+        // var comment = document.getElementById('comment').value;
 
+        //star
         stars.forEach(star => {
-            star.addEventListener('click', function () {
+            star.addEventListener('click', function() {
                 //get value star when click
                 const rateStar = this.getAttribute('data-value');
 
@@ -85,6 +89,14 @@
                 }
             });
         });
+
+        // function checkComment() {
+        //     if (comment.trim() === "") {
+        //         alert("Vui lòng nhập đánh giá của bạn");
+        //         return false;
+        //     }
+        //     return true;
+        // }
     </script>
 </body>
 
