@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CrudUserController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,8 @@ Route::get('list', [CrudUserController::class, 'listUser'])->name('user.list');
 Route::get('role', [RoleController::class, 'role'])->name('user.role');
 
 Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
+
+Route::get('order', [OrderController::class, 'order'])->name('user.order');
 
 Route::get('/', function () {
     return view('welcome');
